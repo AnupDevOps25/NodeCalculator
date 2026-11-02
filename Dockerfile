@@ -19,7 +19,7 @@ COPY public ./public
 USER node
 
 # Document that the app listens on port 3000.
-EXPOSE 3000
+EXPOSE 8000
 
 # Start the Node.js application when the container launches.
 CMD ["npm", "start"]
