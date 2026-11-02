@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1120;
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.calculator {
+  width: min(100%, 360px);
+  padding: 1.25rem;
+  border: 1px solid #293548;
+  border-radius: 1.25rem;
+  background: #111827;
+  box-shadow: 0 1.5rem 4rem #0008;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.display {
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  overflow: hidden;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #0b1120;
+  text-align: right;
+}
+
+.previous-operand {
+  min-height: 1.25rem;
+  color: #94a3b8;
+}
+
+.current-operand {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: clamp(2rem, 12vw, 2.75rem);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.error-message {
+  min-height: 1.25rem;
+  margin: 0.4rem 0;
+  color: #fca5a5;
+  font-size: 0.8rem;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+button {
+  min-height: 3.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #263246;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.2rem;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+button:hover {
+  background: #35445c;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.secondary {
+  background: #374151;
+}
+
+.operator,
+.equals {
+  background: #2563eb;
+}
+
+.operator:hover,
+.equals:hover {
+  background: #3b82f6;
+}
+
+.span-two {
+  grid-column: span 2;
+}
